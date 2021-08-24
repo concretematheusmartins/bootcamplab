@@ -5,12 +5,13 @@ networks:
        driver: bridge
 
 services:
-    web1:
+    web:
         image: httpd:latest
+        container_name: WebServer01
         restart: always
         networks:
             - homolog-network
         ports:
-            - 8083:80
+            - 8082:80
         volumes:
             - ./:/usr/local/apache2/htdocs/
