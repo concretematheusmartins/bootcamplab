@@ -1,0 +1,15 @@
+version: '3'
+
+networks:
+     homolog-network:
+       driver: bridge
+
+services:
+    web1:
+        image: httpd:latest
+        restart: always
+        networks:
+            - homolog-network
+        volumes:
+            - ./:/usr/local/apache2/htdocs/
+
