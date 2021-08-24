@@ -11,6 +11,6 @@ services:
         networks:
             - homolog-network
         ports:
-            - 8083:80
+            - 8082:80
         volumes:
             - ./:/usr/local/apache2/htdocs/
